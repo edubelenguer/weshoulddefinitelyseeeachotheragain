@@ -178,9 +178,9 @@ function s2(){
 
 function quiz(){
   heart(true);
-  const o = ["A set of (very tailored) open questions (there might be a PowerPoint, who knows)",
-             "We need to recover the fun",
-             "Start out fresh, something we have never done before"];
+  const o = ["A set of open questions I really want to ask you, in a warm setting (no PowerPoint this time!)",
+             "Something fun of my choosing, we need to bring back the fun ✨",
+             "Something we have never done before 😏"];
   show(`<h2 class="px">THE QUIZ</h2><p><b>What setting would you prefer?</b></p>
     <div class="opts">${o.map(x => `<button>${esc(x)}</button>`).join("")}</div>
     ${AUTO ? `<p class="small">📨 Your answer is sent to ${CFG.myName} automatically as soon as you pick one.</p>` : ""}`);
