@@ -66,7 +66,6 @@ button.alt{background:var(--cream)}
   <circle cx="170" cy="77" r="1.8" fill="#3b2316"></circle><circle cx="180" cy="77" r="1.8" fill="#3b2316"></circle>
   <circle cx="166" cy="82" r="3" fill="#ff5d8f" opacity=".35"></circle><circle cx="184" cy="82" r="3" fill="#ff5d8f" opacity=".35"></circle>
   <path d="M171 83Q175 87 179 83" stroke="#a33a4a" stroke-width="1.8" fill="none" stroke-linecap="round"></path>
-  <text id="hrt" x="126" y="34" font-size="22" text-anchor="middle">❤️</text>
 </svg>
   <line x1="10" y1="152" x2="250" y2="152" stroke="#4a3580" stroke-width="3"/>
   <!-- MAN -->
@@ -167,7 +166,7 @@ function s2(){
     ${AUTO ? `<p class="small">📨 Your answer is sent to ${CFG.myName} automatically as soon as you pick one.</p>` : ""}`);
   $("#y").onclick = () => { S.verdict = "Yes"; quiz(); };
   $("#no").onclick = () => { S.verdict = "No"; heart(false);
-    finish(`<p style="font-size:20px"><b>I still enjoyed last night a lot, I wish you the best :)</b></p>`); };
+    finish(`<p style="font-size:20px"><b>I still enjoyed seeing you the other day a lot, I wish you the best :)</b></p>`); };
   $("#m").onclick = () => { S.verdict = "I need to think about it"; heart(true);
     if (AUTO) autoSend(msg()).catch(()=>{});
     show(`<h2 class="px">NO RUSH</h2><p>Take all the time you need. Whenever you are ready, fill in the quiz.</p>
@@ -178,9 +177,10 @@ function s2(){
 
 function quiz(){
   heart(true);
-  const o = ["A set of open questions I really want to ask you, in a warm setting (no PowerPoint this time!)",
-             "Something fun of my choosing, we need to bring back the fun ✨",
-             "Something we have never done before 😏"];
+  const o = ["A set of open questions I still would like to ask you, in a warm setting (no PowerPoint this time, but there will be a list! 📙)",
+             "No more serious talk at least for now, we need to bring back the fun ✨",
+             "Something we have never done before 😏",
+             "We can start with a coffee ☕"];
   show(`<h2 class="px">THE QUIZ</h2><p><b>What setting would you prefer?</b></p>
     <div class="opts">${o.map(x => `<button>${esc(x)}</button>`).join("")}</div>
     ${AUTO ? `<p class="small">📨 Your answer is sent to ${CFG.myName} automatically as soon as you pick one.</p>` : ""}`);
