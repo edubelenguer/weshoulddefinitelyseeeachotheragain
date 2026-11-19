@@ -167,7 +167,7 @@ function s2(){
     ${AUTO ? `<p class="small">📨 Your answer is sent to ${CFG.myName} automatically as soon as you pick one.</p>` : ""}`);
   $("#y").onclick = () => { S.verdict = "Yes"; quiz(); };
   $("#no").onclick = () => { S.verdict = "No"; heart(false);
-    finish(`<p style="font-size:20px"><b>I still enjoyed seeing you the other day a lot, I wish you the best :)</b></p>`); };
+    finish(`<p style="font-size:20px"><b>I still enjoyed seeing you a lot, I wish you the best 🙂</b></p>`); };
   $("#m").onclick = () => { S.verdict = "I need to think about it"; heart(true);
     if (AUTO) autoSend(msg()).catch(()=>{});
     show(`<h2 class="px">NO RUSH</h2><p>Take all the time you need. Whenever you are ready, fill in the quiz.</p>
